@@ -1,0 +1,27 @@
+{
+  "name": "nip",
+  "version": "0.0.1",
+  "description": "Node-based IP address lookup utility",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "npx test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LilithTundrus/NodeIPLookup.git"
+  },
+  "keywords": [
+    "node",
+    "ip",
+    "lookup",
+    "track",
+    "address",
+    "information"
+  ],
+  "author": "Lilith Tundrus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LilithTundrus/NodeIPLookup/issues"
+  },
+  "homepage": "https://github.com/LilithTundrus/NodeIPLookup#readme"
+}

@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/LilithTundrus/NodeIPLookup/issues"
   },
-  "homepage": "https://github.com/LilithTundrus/NodeIPLookup#readme"
+  "homepage": "https://github.com/LilithTundrus/NodeIPLookup#readme",
+  "devDependencies": {
+    "@types/node": "^10.11.4"
+  }
 }

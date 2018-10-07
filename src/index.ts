@@ -13,6 +13,14 @@ import commander from 'commander';
 // Get the CLI arguments and call the proper module
 commander.version('0.0.1', '-v, --version')
     .option('--v4 <IP Address>', 'Get data from a give IPV4 Address')
-    .option('--v6 <IP Address>', 'Get data from a give IPV6 Address');
+    .action((cmd) => {
+        // Call the v4 module and pass control to it
+        console.log(cmd.v4)
+    })
+    .option('--v6 <IP Address>', 'Get data from a give IPV6 Address')
+    .action((cmd) => {
+        // Call the v4 module and pass control to it
+        console.log('Option not yet implemented.');
+    })
 
 commander.parse(process.argv);

@@ -4,10 +4,18 @@
 // Node/NPM dependencies
 import request from 'request';
 
+// Base URL for IP address lookups
+const baseURL = 'https://ipapi.co/';
+
 export function v4Lookup(address: string) {
     if (checkIfIPAddressIsValid(address)) {
-        request.get(`https://ipapi.co/${address}/json`, (err, res, body) => {
-            console.log(body)
+        request.get(`${baseURL}${address}/json`, (err, res, body) => {
+            if (err) {
+                return console.log(`${err}`);
+            }
+
+            // Make sure thhe response is JSON before making it pretty
+            console.log(body);
         });
 
     } else {

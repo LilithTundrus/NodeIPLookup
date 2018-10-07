@@ -3,6 +3,7 @@
 
 // Node/NPM dependencies
 import commander from 'commander';
+import { v4Lookup } from './lib/lookupv4';
 
 // Main entry point, call all modules
 
@@ -15,12 +16,12 @@ commander.version('0.0.1', '-v, --version')
     .option('--v4 <IP Address>', 'Get data from a give IPV4 Address')
     .action((cmd) => {
         // Call the v4 module and pass control to it
-        console.log(cmd.v4)
+        return v4Lookup(cmd.v4)
     })
-    .option('--v6 <IP Address>', 'Get data from a give IPV6 Address')
-    .action((cmd) => {
-        // Call the v4 module and pass control to it
-        console.log('Option not yet implemented.');
-    })
+    // .option('--v6 <IP Address>', 'Get data from a give IPV6 Address')
+    // .action((cmd) => {
+    //     // Call the v4 module and pass control to it
+    //     return console.log('Option not yet implemented.');
+    // })
 
 commander.parse(process.argv);

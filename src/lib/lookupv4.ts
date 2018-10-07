@@ -5,7 +5,15 @@
 import request from 'request';
 
 export function v4Lookup(address: string) {
-    console.log(checkIfIPAddressIsValid(address));
+    if (checkIfIPAddressIsValid(address)) {
+        request.get(`https://ipapi.co/${address}/json`, (err, res, body) => {
+            console.log(body)
+        });
+
+    } else {
+        console.log(`${address} is not a valid IPV4 address`);
+        return process.exit(0);
+    }
 }
 
 function checkIfIPAddressIsValid(address: string): boolean {

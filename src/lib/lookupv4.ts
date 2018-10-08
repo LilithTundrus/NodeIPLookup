@@ -30,3 +30,12 @@ function checkIfIPAddressIsValid(address: string): boolean {
     }
     return false;
 }
+
+function checkIfJSON(jsonString: string): boolean {
+    try {
+        JSON.parse(jsonString);
+        return true;
+    } catch (e) {
+        return false;
+    }
+}

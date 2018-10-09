@@ -17,16 +17,20 @@ export function v4Lookup(address: string) {
                 return console.log(`${err}`);
             }
 
+            // Make sure thhe response is JSON before making it pretty
             if (checkIfJSON(body)) {
                 // Parse the JSON
                 let parsedIPInfo: ipInfo = JSON.parse(body);
-                console.log(parsedIPInfo.ip)
+
+                console.log('\nReturned Information:');
 
                 // For each Property, neatly print it out
+                for (let key in parsedIPInfo) {
+                    console.log(`${key}: ${parsedIPInfo[key]}`);
+                }
+            } else {
+                console.log('Something went wrong: Could not parese JSON response');
             }
-
-            // Make sure thhe response is JSON before making it pretty
-            console.log(body);
         });
 
     } else {

@@ -14,16 +14,19 @@ import { v4Lookup } from './lib/lookupv4';
 // Get the CLI arguments and call the proper module
 commander.version('0.0.1', '-v, --version')
     .option('--v4 <IP Address>', 'Get data from a give IPV4 Address')
-// .option('--v6 <IP Address>', 'Get data from a give IPV6 Address')
+    .option('--v6 <IP Address>', 'Get data from a give IPV6 Address')
 // .action((cmd) => {
 //     // Call the v4 module and pass control to it
 //     return console.log('Option not yet implemented.');
 // })
 
+// TODO: make a -i option for an internal NSLookup
 
 commander.parse(process.argv);
 
 if (commander.v4) {
     // Call the v4 module and pass control to it
     v4Lookup(commander.v4)
+} else if (commander.v6) {
+    console.log('aaa')
 }

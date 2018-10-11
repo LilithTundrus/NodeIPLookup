@@ -9,7 +9,7 @@ import { ipInfo } from './interfaces'
 const baseURL = 'https://ipapi.co/';
 
 
-
+// TODO: have this only return the JSON to be cleaned
 export function v4Lookup(address: string) {
     if (checkIfIPAddressIsValid(address)) {
         request.get(`${baseURL}${address}/json`, (err, res, body) => {
@@ -22,14 +22,14 @@ export function v4Lookup(address: string) {
                 // Parse the JSON
                 let parsedIPInfo: ipInfo = JSON.parse(body);
 
-                console.log('\nReturned Information:');
+                console.log('\nReturned Information:\n');
 
                 // For each Property, neatly print it out
                 for (let key in parsedIPInfo) {
                     console.log(`${key}: ${parsedIPInfo[key]}`);
                 }
             } else {
-                console.log('Something went wrong: Could not parese JSON response');
+                console.log('Something went wrong: Could not parese JSON response from IPV4 lookup');
             }
         });
 

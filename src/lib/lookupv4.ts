@@ -4,14 +4,15 @@
 // Node/NPM and local dependencies
 import request from 'request';
 import { ipInfo } from './interfaces'
+import { isIPv4 } from 'net';
 
 // Base URL for IP address lookups
 const baseURL = 'https://ipapi.co/';
 
 
-// TODO: have this only return the JSON to be cleaned
+// TODO: have this only return the JSON to be cleaned/logged
 export function v4Lookup(address: string) {
-    if (checkIfIPAddressIsValid(address)) {
+    if (isIPv4(address)) {
         request.get(`${baseURL}${address}/json`, (err, res, body) => {
             if (err) {
                 return console.log(`${err}`);
@@ -37,14 +38,6 @@ export function v4Lookup(address: string) {
         console.log(`${address} is not a valid IPV4 address`);
         return process.exit(0);
     }
-}
-
-// TODO: use isIPv4 function instead
-function checkIfIPAddressIsValid(address: string): boolean {
-    if (/^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(address)) {
-        return true;
-    }
-    return false;
 }
 
 function checkIfJSON(jsonString: string): boolean {

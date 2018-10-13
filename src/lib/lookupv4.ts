@@ -23,12 +23,8 @@ export function v4Lookup(address: string) {
                 // Parse the JSON
                 let parsedIPInfo: ipInfo = JSON.parse(body);
 
-                console.log('\nReturned Information:\n');
-
-                // For each Property, neatly print it out
-                for (let key in parsedIPInfo) {
-                    console.log(`${key}: ${parsedIPInfo[key]}`);
-                }
+                // Print out the results
+                printLookupInfo(parsedIPInfo);
             } else {
                 console.log('Something went wrong: Could not parese JSON response from IPV4 lookup');
             }
@@ -37,6 +33,15 @@ export function v4Lookup(address: string) {
     } else {
         console.log(`${address} is not a valid IPV4 address`);
         return process.exit(0);
+    }
+}
+
+function printLookupInfo(lookupInfo: ipInfo) {
+    console.log('\nReturned Information:\n');
+
+    // For each Property, neatly print it out
+    for (let key in lookupInfo) {
+        console.log(`${key}: ${lookupInfo[key]}`);
     }
 }
 

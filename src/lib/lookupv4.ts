@@ -10,12 +10,12 @@ import { isIPv4 } from 'net';
 const baseURL = 'https://ipapi.co/';
 
 
-// TODO: have this only return the JSON to be cleaned/logged
 export function v4Lookup(address: string) {
     if (isIPv4(address)) {
         request.get(`${baseURL}${address}/json`, (err, res, body) => {
             if (err) {
-                return console.log(`${err}`);
+                // This really shouldn't happen, but log anyway
+                return console.log(`Something went wrong: ${err}`);
             }
 
             // Make sure thhe response is JSON before making it pretty
@@ -29,7 +29,6 @@ export function v4Lookup(address: string) {
                 console.log('Something went wrong: Could not parese JSON response from IPV4 lookup');
             }
         });
-
     } else {
         console.log(`${address} is not a valid IPV4 address`);
         return process.exit(0);

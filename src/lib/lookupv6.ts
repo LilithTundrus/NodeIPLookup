@@ -9,7 +9,7 @@ import { isIPv6 } from 'net';
 // Base URL for IP address lookups
 const baseURL = 'https://ipapi.co/';
 
-// TODO: have this only return the JSON to be cleaned/logged
+
 export function v6Lookup(address: string) {
     if (isIPv6(address)) {
         request.get(`${baseURL}${address}/json`, (err, res, body) => {

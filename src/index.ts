@@ -1,3 +1,6 @@
+#!/usr/bin/env node
+// The above line tells OS that this is NOT a shell script, and needs a specific interpreter
+
 // Using ES6 strict mode (not 100% needed, but ensure that the compiled JS is in strict mode)
 'use strict';
 
@@ -5,7 +8,7 @@
 import commander from 'commander';
 import { v4Lookup } from './lib/lookupv4';
 import { v6Lookup } from './lib/lookupv6';
-
+import { test } from './lib/lookupLocal';
 // Main entry point, call all modules
 
 
@@ -16,6 +19,7 @@ import { v6Lookup } from './lib/lookupv6';
 commander.version('0.0.1', '-v, --version')
     .option('--v4 <IP Address>', 'Get data from a give IPV4 Address')
     .option('--v6 <IP Address>', 'Get data from a give IPV6 Address')
+    .option('--local <IP Address>', 'Locally look up an IP address using DNS services')
 
 
 // TODO: make a -i option for an internal NSLookup
@@ -26,4 +30,6 @@ if (commander.v4) {
     v4Lookup(commander.v4);
 } else if (commander.v6) {
     v6Lookup(commander.v6);
+} else if (commander.local) {
+    test();
 }

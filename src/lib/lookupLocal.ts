@@ -5,8 +5,24 @@
 
 const dns = require('dns');
 
+
 export function test() {
-    dns.lookup('192.168.2.23', (err, address, family) => {
-        console.log('address: %j family: IPv%s', address, family);
+ 
+    dns.resolve4('192.168.2.23', function (err, addresses) {
+      if (err) throw err;
+     
+      console.log('addresses: ' + JSON.stringify(addresses));
+     
+      addresses.forEach(function (a) {
+        dns.reverse(a, function (err, domains) {
+          if (err) {
+            console.log('reverse for ' + a + ' failed: ' +
+              err.message);
+          } else {
+            console.log('reverse for ' + a + ': ' +
+              JSON.stringify(domains));
+          }
+        });
+      });
     });
 }

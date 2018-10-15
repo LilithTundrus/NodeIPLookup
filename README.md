@@ -1,7 +1,5 @@
 # iPeek
 </br>
-</br>
-</br>
 
 
 ## About
@@ -10,6 +8,7 @@
 __iPeek__ is a command line utility designed to get geolocation about a given IP address (v4 or v6)
 </br>
 </br>
+
 
 ## Installing iPeek
 </br>

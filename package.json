@@ -2,12 +2,12 @@
   "name": "ipeek",
   "version": "0.0.1",
   "description": "Node-based IP address lookup utility",
-  "main": "build/index.js",
+  "main": "build/ipeek.js",
   "scripts": {
     "test": "npx test"
   },
   "bin": {
-    "ipeek": "./build/index.js"
+    "ipeek": "./build/ipeek.js"
   },
   "engines": {
     "node": ">=8"

@@ -1,5 +1,5 @@
 {
-  "name": "nip",
+  "name": "ipeek",
   "version": "0.0.1",
   "description": "Node-based IP address lookup utility",
   "main": "build/index.js",
@@ -7,8 +7,12 @@
     "test": "npx test"
   },
   "bin": {
-    "iploc": "./build/index.js"
+    "ipeek": "./build/index.js"
   },
+  "engines": {
+    "node": ">=8"
+  },
+  "preferGlobal": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LilithTundrus/NodeIPLookup.git"
@@ -19,7 +23,8 @@
     "lookup",
     "track",
     "address",
-    "information"
+    "information",
+    "dns"
   ],
   "author": "Lilith Tundrus",
   "license": "MIT",

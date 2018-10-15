@@ -13,7 +13,7 @@ import { lookupAny } from './lib/lookupAny';
 
 
 // This script/CLI tool is designed to take an ipv6 or v4 address and retrieve information about it
-// (but not anything special like is it a real IP address/etc.)
+// (but not anything special like is it a real IP address vs. a fake one)
 
 // Get the CLI arguments and call the proper module
 commander.version('0.0.1', '-v, --version')
@@ -33,4 +33,6 @@ if (commander.v4) {
 } else if (commander.dns) {
     // Call the DNS module and pass control to it
     lookupAny(commander.dns);
+} else {
+    commander.help();
 }

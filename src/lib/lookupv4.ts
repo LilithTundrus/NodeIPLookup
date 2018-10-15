@@ -26,7 +26,7 @@ export function v4Lookup(address: string) {
                 let parsedIPInfo: ipInfo = JSON.parse(body);
 
                 // Print out the results
-                printLookupInfo(parsedIPInfo);
+                return printLookupInfo(parsedIPInfo);
             } else {
                 console.log('Something went wrong: Could not parese JSON response from IPV4 lookup');
                 return process.exit(0);

@@ -28,7 +28,9 @@ if (commander.v4) {
     // Call the v4 module and pass control to it
     v4Lookup(commander.v4);
 } else if (commander.v6) {
+    // Call the v6 module and pass control to it
     v6Lookup(commander.v6);
 } else if (commander.dns) {
+    // Call the DNS module and pass control to it
     lookupAny(commander.dns);
 }

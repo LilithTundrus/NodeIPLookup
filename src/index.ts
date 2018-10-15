@@ -8,7 +8,7 @@
 import commander from 'commander';
 import { v4Lookup } from './lib/lookupv4';
 import { v6Lookup } from './lib/lookupv6';
-import { test } from './lib/lookupLocal';
+import { lookupAny } from './lib/lookupLocal';
 // Main entry point, call all modules
 
 
@@ -19,10 +19,9 @@ import { test } from './lib/lookupLocal';
 commander.version('0.0.1', '-v, --version')
     .option('--v4 <IP Address>', 'Get data from a give IPV4 Address')
     .option('--v6 <IP Address>', 'Get data from a give IPV6 Address')
-    .option('--local <IP Address>', 'Locally look up an IP address using DNS services')
+    .option('--dns <IP Address>', 'Look up an IP address using DNS services');
 
-
-// TODO: make a -i option for an internal NSLookup
+// Parse the CLI arguments given (using commander)
 commander.parse(process.argv);
 
 if (commander.v4) {
@@ -31,5 +30,5 @@ if (commander.v4) {
 } else if (commander.v6) {
     v6Lookup(commander.v6);
 } else if (commander.local) {
-    test();
+    lookupAny(commander.local);
 }

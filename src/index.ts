@@ -8,7 +8,7 @@
 import commander from 'commander';
 import { v4Lookup } from './lib/lookupv4';
 import { v6Lookup } from './lib/lookupv6';
-import { lookupAny } from './lib/lookupLocal';
+import { lookupAny } from './lib/lookupAny';
 // Main entry point, call all modules
 
 
@@ -29,6 +29,6 @@ if (commander.v4) {
     v4Lookup(commander.v4);
 } else if (commander.v6) {
     v6Lookup(commander.v6);
-} else if (commander.local) {
-    lookupAny(commander.local);
+} else if (commander.dns) {
+    lookupAny(commander.dns);
 }

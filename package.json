@@ -6,8 +6,13 @@
   "scripts": {
     "test": "npx test"
   },
+  "types": "build/lib/interfaces.d.ts",
+  "files": [
+    "build/*.js",
+    "build/*.d.ts"
+  ],
   "bin": {
-    "ipeek": "./build/ipeek.js"
+    "ipeek": "build/ipeek.js"
   },
   "engines": {
     "node": ">=8"

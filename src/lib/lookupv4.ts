@@ -16,7 +16,8 @@ export function v4Lookup(address: string) {
         request.get(`${baseURL}${address}/json`, (err, res, body) => {
             if (err) {
                 // This really shouldn't happen, but log anyway
-                return console.log(`Something went wrong: ${err}`);
+                console.log(`Something went wrong: ${err}`);
+                return process.exit(0);
             }
 
             // Make sure thhe response is JSON before making it pretty
@@ -28,6 +29,7 @@ export function v4Lookup(address: string) {
                 printLookupInfo(parsedIPInfo);
             } else {
                 console.log('Something went wrong: Could not parese JSON response from IPV4 lookup');
+                return process.exit(0);
             }
         });
     } else {

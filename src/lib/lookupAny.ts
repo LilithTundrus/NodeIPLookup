@@ -11,7 +11,8 @@ export function lookupAny(address: string) {
     // Use the built-in node.js DNS service to attempt to lookup the address
     dns.resolve(address, function (err, addresses) {
         if (err) {
-            return console.log(`Something went wrong during DNS lookup: ${err.message}`);
+            console.log(`Something went wrong during DNS lookup: ${err.message}`);
+            return process.exit(0);
         }
 
         console.log(`\nAddresses: ${addresses}`);

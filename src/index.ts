@@ -17,8 +17,8 @@ import { lookupAny } from './lib/lookupAny';
 
 // Get the CLI arguments and call the proper module
 commander.version('0.0.1', '-v, --version')
-    .option('--v4 <IP Address>', 'Get data from a give IPV4 Address')
-    .option('--v6 <IP Address>', 'Get data from a give IPV6 Address')
+    .option('--v4 <IP Address>', 'Get location data for a given IPV4 Address')
+    .option('--v6 <IP Address>', 'Get location data for a given IPV6 Address')
     .option('--dns <IP Address>', 'Look up an IP address using DNS services');
 
 // Parse the CLI arguments given (using commander)

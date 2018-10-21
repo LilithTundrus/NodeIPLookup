@@ -30,7 +30,7 @@ Once you've installed iPeek globally using NPM, you're good to go!
 
 iPeek has the following available options:
 
-```
+```bash
 Usage: ipeek [options]
 
 Options:
@@ -42,6 +42,41 @@ Options:
   -h, --help          output usage information
 ```
 
+</br>
+</br>
+
+
+## Example
+</br>
+
+__V4 lookup example:__
+
+```
+$ ipeek --v4 8.8.8.8
+
+Getting information for 8.8.8.8
+
+Returned Information:
+
+ip: 8.8.8.8
+city: Mountain View
+region: California
+region_code: CA
+country: US
+country_name: United States
+continent_code: NA
+in_eu: false
+postal: 94035
+latitude: 37.386
+longitude: -122.0838
+timezone: America/Los_Angeles
+utc_offset: -0700
+country_calling_code: +1
+currency: USD
+languages: en-US,es-US,haw,fr
+asn: AS15169
+org: Google LLC
+```
 </br>
 </br>
 

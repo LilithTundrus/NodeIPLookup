@@ -33,7 +33,7 @@ export function v6Lookup(address: string) {
             }
         });
     } else {
-        console.log(`${address} is not a valid IPV4 address`);
+        console.log(`${address} is not a valid IPV6 address`);
         return process.exit(0);
     }
 }

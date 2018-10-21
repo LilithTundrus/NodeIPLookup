@@ -1,6 +1,6 @@
 {
   "name": "ipeek",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Node-based IP address lookup utility",
   "main": "build/ipeek.js",
   "scripts": {
@@ -9,7 +9,9 @@
   "types": "build/lib/interfaces.d.ts",
   "files": [
     "build/*.js",
-    "build/*.d.ts"
+    "build/*.d.ts",
+    "build/lib/*.js",
+    "build/lib/*.d.ts"
   ],
   "bin": {
     "ipeek": "build/ipeek.js"

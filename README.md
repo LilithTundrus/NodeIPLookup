@@ -57,6 +57,9 @@ This project is __NOT__ meant to be used to look up _local_ IP addresses
 ## History
 </br>
 
+- **Alpha v0.0.3**
+    - Fixed install issue
+
 - **Alpha v0.0.1**
     - Initial release
 </br>

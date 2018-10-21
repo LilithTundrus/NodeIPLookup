@@ -25,6 +25,9 @@ npm install -g ipeek
 ## Using iPeek
 </br>
 
+Once you've installed iPeek globally using NPM, you're good to go!
+
+
 iPeek has the following available options:
 
 ```
@@ -39,6 +42,14 @@ Options:
   -h, --help          output usage information
 ```
 
+</br>
+</br>
+
+
+## Limitations
+</br>
+
+This project is __NOT__ meant to be used to look up _local_ IP addresses
 </br>
 </br>
 

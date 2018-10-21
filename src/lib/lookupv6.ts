@@ -12,7 +12,7 @@ const baseURL = 'https://ipapi.co/';
 
 export function v6Lookup(address: string) {
     if (isIPv6(address)) {
-        console.log(`Getting information for ${address}`);
+        console.log(`\nGetting information for ${address}`);
         request.get(`${baseURL}${address}/json`, (err, res, body) => {
             if (err) {
                 // This really shouldn't happen, but log anyway

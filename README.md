@@ -93,6 +93,10 @@ This project is __NOT__ meant to be used to look up _local_ IP addresses
 </br>
 
 - **Alpha v0.0.4**
+    - Updated documentation
+
+
+- **Alpha v0.0.4**
     - Typo fix on v6 module
     - Added an indicator for fetch information
 
@@ -103,6 +107,27 @@ This project is __NOT__ meant to be used to look up _local_ IP addresses
 
 - **Alpha v0.0.1**
     - Initial release
+</br>
+</br>
+
+
+## Issues
+</br>
+
+Do you have any issues or recommendations for this package? Feel free to open an issue in the [issue](https://github.com/LilithTundrus/NodeIPLookup/issues) section. I'm always happy to help :D
+</br>
+</br>
+
+
+## Donating
+</br>
+
+Like what I do?
+</br>
+<a href='https://ko-fi.com/J3J1CYJ2' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+</br>
+
+Please consider donating even a little. These projects do take time and effort to maintain.
 </br>
 </br>
 

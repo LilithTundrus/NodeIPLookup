@@ -92,7 +92,7 @@ This project is __NOT__ meant to be used to look up _local_ IP addresses
 ## History
 </br>
 
-- **Alpha v0.0.4**
+- **Alpha v0.0.5**
     - Updated documentation
 
 
